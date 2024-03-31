@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import ContactForm from '../contactForm/ContactForm';
-// import SearchBox from '../searchBox/SearchBox';
+import SearchBox from '../searchBox/SearchBox';
 import ContactList from '../contactList/ContactList';
 import './App.css';
 
@@ -17,7 +17,7 @@ function App() {
     <div>
       <h1>Phonebook</h1>
       <ContactForm />
-      {/* <SearchBox /> */}
+      <SearchBox />
       <ContactList contList={contList} />
     </div>
   );

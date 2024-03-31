@@ -2,8 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 250px;
+  width: 240px;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 20px;
+  padding: 16px;
+}
+
+.contact p {
+  text-align: start;
 }

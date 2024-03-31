@@ -1,9 +1,9 @@
 import Contact from '../contact/Contact';
-// import css from './FriendList.module.css';
+import css from './ContactList.module.css';
 
 const ContactList = ({ contList }) => {
   return (
-    <ul>
+    <ul className={css.contactList}>
       {/* Кількість li залежить від кількості об'єктів в масиві */}
       {contList.map(contact => {
         return (
