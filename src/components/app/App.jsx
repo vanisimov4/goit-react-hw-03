@@ -13,12 +13,22 @@ function App() {
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
   ]);
 
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleChangeSearch = event => {
+    setSearchValue(event.target.value);
+  };
+
+  const filteredContacts = contList.filter(contact =>
+    contact.name.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase())
+  );
+
   return (
     <div>
       <h1>Phonebook</h1>
       <ContactForm />
-      <SearchBox />
-      <ContactList contList={contList} />
+      <SearchBox value={searchValue} onChange={handleChangeSearch} />
+      <ContactList contList={filteredContacts} />
     </div>
   );
 }
