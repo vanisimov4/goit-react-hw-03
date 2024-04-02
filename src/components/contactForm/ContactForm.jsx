@@ -1,11 +1,15 @@
+import { Formik, Form, Field } from 'formik';
+import css from './ContactForm.module.css';
+
 const ContactForm = () => {
   return (
-    <div>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
-    </div>
+    <Formik initialValues={{}} onSubmit={() => {}}>
+      <Form className={css.form}>
+        <Field type="text" name="name" />
+        <Field type="number" name="number" />
+        <button type="submit">Add contact</button>
+      </Form>
+    </Formik>
   );
 };
 
