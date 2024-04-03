@@ -24,7 +24,7 @@ function App() {
   );
 
   return (
-    <div>
+    <div className="mainWrapper">
       <h1>Phonebook</h1>
       <ContactForm />
       <SearchBox value={searchValue} onChange={handleChangeSearch} />
