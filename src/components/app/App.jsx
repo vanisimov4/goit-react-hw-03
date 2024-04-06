@@ -15,6 +15,13 @@ function App() {
 
   const [searchValue, setSearchValue] = useState('');
 
+  const handleAddContact = contactItem => {
+    setContList(prevState => {
+      // return new state
+      return [...prevState, contactItem];
+    });
+  };
+
   const handleChangeSearch = event => {
     setSearchValue(event.target.value);
   };
@@ -26,7 +33,7 @@ function App() {
   return (
     <div className="mainWrapper">
       <h1>Phonebook</h1>
-      <ContactForm />
+      <ContactForm onAddContact={handleAddContact} />
       <SearchBox value={searchValue} onChange={handleChangeSearch} />
       <ContactList contList={filteredContacts} />
     </div>

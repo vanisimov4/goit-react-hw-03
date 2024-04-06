@@ -17,6 +17,11 @@
   width: 100%;
 }
 
+.error {
+  color: red;
+  font-size: 80%;
+}
+
 .form button {
   margin: 0 auto;
 }

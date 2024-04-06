@@ -1,9 +1,8 @@
-import { nanoid } from 'nanoid';
-
+import { useId } from 'react';
 import css from './SearchBox.module.css';
 
 const SearchBox = ({ value, onChange }) => {
-  const id = nanoid();
+  const id = useId();
   return (
     <div className={css.searchBox}>
       <label htmlFor={id}>Find contacts by name</label>
