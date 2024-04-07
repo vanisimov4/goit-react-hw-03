@@ -22,6 +22,13 @@ function App() {
     });
   };
 
+  const handleDelContact = id => {
+    const nextContacts = [...contList];
+    const index = nextContacts.findIndex(contact => contact.id === id);
+    nextContacts.splice(index, 1);
+    setContList(nextContacts);
+  };
+
   const handleChangeSearch = event => {
     setSearchValue(event.target.value);
   };
@@ -35,7 +42,7 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm onAddContact={handleAddContact} />
       <SearchBox value={searchValue} onChange={handleChangeSearch} />
-      <ContactList contList={filteredContacts} />
+      <ContactList contList={filteredContacts} onDelete={handleDelContact} />
     </div>
   );
 }
